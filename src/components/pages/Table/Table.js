@@ -1,9 +1,7 @@
+import TableCard from "../../features/TableCard/TableCard";
+
 const Table = () => {
-  return (
-    <div>
-      <h1>Table</h1>
-    </div>
-  );
+  return <TableCard />;
 };
 
 export default Table;
