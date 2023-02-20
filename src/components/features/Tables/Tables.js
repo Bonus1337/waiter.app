@@ -8,25 +8,24 @@ const Tables = () => {
 
   return (
     <>
-      {tables.map((table) => (
-        <Row key={table.id} className="py-3 border-bottom align-items-center">
-          <Col xs={2}>
-            <Card.Title>Table {table.id}</Card.Title>
-          </Col>
-          <Col xs={8}>
-            <Card.Text>
-              <strong>Status: </strong>
-              {table.status}
-            </Card.Text>
-          </Col>
-          <Col>
-            <Link to={"/table/" + table.id}>
-              <Button variant="primary">Show more</Button>
-            </Link>
-          </Col>
-        </Row>
-      ))}
-    </>
+    {tables.map(table => (
+    <Row key={table.id} className="py-3 border-bottom align-items-center">
+      <Col xs={2}>
+        <Card.Title>Table {table.id}</Card.Title>
+      </Col>
+      <Col xs={8}>
+        <Card.Text><strong>Status: </strong>{table.status}</Card.Text>
+        {table.status === "Busy" &&
+        <Card.Text><strong>Bill: </strong>${table.bill}</Card.Text>}
+      </Col>
+      <Col>
+      <Link to={'/table/' + table.id}>
+        <Button variant='primary'>Show more</Button>
+      </Link>
+      </Col>
+    </Row>
+    ))}
+		</>
   );
 };
 

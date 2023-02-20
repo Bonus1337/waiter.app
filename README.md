@@ -1,4 +1,4 @@
-# Link to app:
+# Link to React App :
 
 # Getting Started with Create React App
 
